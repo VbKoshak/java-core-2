@@ -1,23 +1,23 @@
 import java.util.HashMap;
 
 public class Cart {
-  private HashMap<Long,String> purchases;
+  private HashMap<Product,String> purchases;
   private long subTotalPrice;
 
   public long getSubTotalPrice() {
     return this.subTotalPrice;
   }
 
-  public void addToCart(long productId, String attributeHash){
-    this.purchases.put(productId,attributeHash);
-    addPrice(productId, attributeHash);
+  public void addToCart(Product product, String attributeHash){
+    this.purchases.put(product,attributeHash);
+    addPrice(product, attributeHash);
   }
 
-  public HashMap<Long,String> getPurchases(){
+  public HashMap<Product,String> getPurchases(){
     return this.purchases;
   }
 
-  private void addPrice(long productId,String attributeHash){
+  private void addPrice(Product productId,String attributeHash){
     // add price to subTotalPrice
   }
 

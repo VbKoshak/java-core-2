@@ -2,11 +2,13 @@ public class ProductCatalog {
   private String name;
   private String locale;
   private ProductCategoty[] catalog;
+  private PriceBook priceBook;
 
-  public ProductCatalog(String name, String locale, ProductCategoty[] catalog) {
+  public ProductCatalog(String name, String locale, ProductCategoty[] catalog, PriceBook priceBook) {
     this.name = name;
     this.locale = locale;
     this.catalog = catalog;
+    this.priceBook = priceBook;
   }
 
   public String getName() {
@@ -35,5 +37,13 @@ public class ProductCatalog {
 
   public void addToCatalog(ProductCategoty category){
     //..
+  }
+
+  public PriceBook getPriceBook() {
+    return priceBook;
+  }
+
+  public void setPriceBook(PriceBook priceBook) {
+    this.priceBook = priceBook;
   }
 }

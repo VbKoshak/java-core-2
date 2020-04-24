@@ -1,16 +1,10 @@
-public class Guest {
-  protected Cart[] savedCarts;
-  protected long userId;
+public class Guest extends User {
 
-  public Guest(Cart currentCart){
+  private String generateTempNickname(){
     //..
   }
 
-  public void saveCart(Cart a){
-    //...
-  }
-
-  public long getUserId(long id){
-    return userId;
+  public Guest{
+    this.nickname = generateTempNickname();
   }
 }

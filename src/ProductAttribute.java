@@ -1,10 +1,8 @@
-public class ProductAttribute {
+abstract class ProductAttribute {
   private String name;
-  private String[] values; // all possible values of this attribute
 
-  public ProductAttribute(String name, String[] values){
+  public ProductAttribute(String name){
     this.name = name;
-    this.values = values;
   }
 
   public String getName() {
@@ -14,18 +12,4 @@ public class ProductAttribute {
   public void setName(String name) {
     this.name = name;
   }
-
-  public String[] getValues() {
-    return values;
-  }
-
-  public void setValues(String[] values) {
-    this.values = values;
-  }
-
-  public void addValue(String val){
-    //..
-  }
-
-
 }
