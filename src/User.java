@@ -6,6 +6,9 @@ abstract class User {
   public User(Cart currentCart){
     //..
   }
+  public User(){
+    //..
+  }
 
   public void saveCart(Cart a){
     //...

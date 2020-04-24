@@ -4,6 +4,10 @@ public class Cart {
   private HashMap<Product,String> purchases;
   private long subTotalPrice;
 
+  public Cart(){
+    //..
+  }
+
   public long getSubTotalPrice() {
     return this.subTotalPrice;
   }

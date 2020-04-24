@@ -7,11 +7,11 @@ public class Color extends ProductAttribute{
   }
 
 
-  public int getValue() {
+  public String getValue() {
     return hexValue;
   }
 
-  public void setValue(int hexValue) {
+  public void setValue(String hexValue) {
     this.hexValue = hexValue;
   }
 }

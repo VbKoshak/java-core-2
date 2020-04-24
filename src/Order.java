@@ -2,6 +2,35 @@ import java.time.LocalDateTime;
 
 public class Order {
 
+  private enum orderStatus{
+    delivered,
+    declined,
+    waitingPayment,
+    delivering
+  }
+
+  private UserOrderInfo orderInfo;
+  private orderStatus status;
+  private OrderReceipt receipt;
+  private Cart cart;
+  private LocalDateTime createTime;
+  private String courierName; // can be changed to curierId (delivering campaign, delivermen_id)
+  private int userRating;
+  private String userComment;
+  private long totalPrice;
+
+  public Order(UserOrderInfo orderInfo, orderStatus status, OrderReceipt receipt, Cart cart, LocalDateTime createTime, String courierName, int userRating, String userComment, long totalPrice) {
+    this.orderInfo = orderInfo;
+    this.status = status;
+    this.receipt = receipt;
+    this.cart = cart;
+    this.createTime = createTime;
+    this.courierName = courierName;
+    this.userRating = userRating;
+    this.userComment = userComment;
+    this.totalPrice = totalPrice;
+  }
+
   public UserOrderInfo getOrderInfo() {
     return orderInfo;
   }
@@ -65,35 +94,5 @@ public class Order {
   public void setTotalPrice(long totalPrice) {
     this.totalPrice = totalPrice;
   }
-
-  private enum orderStatus{
-    delivered,
-    declined,
-    waitingPayment,
-    delivering
-  }
-
-  private UserOrderInfo orderInfo;
-  private orderStatus status;
-  private OrderReceipt receipt;
-  private Cart cart;
-  private LocalDateTime createTime;
-  private String courierName; // can be changed to curierId (delivering campaign, delivermen_id)
-  private int userRating;
-  private String userComment;
-  private long totalPrice;
-
-  public Order(UserOrderInfo orderInfo, orderStatus status, OrderReceipt receipt, Cart cart, LocalDateTime createTime, String courierName, int userRating, String userComment, long totalPrice) {
-    this.orderInfo = orderInfo;
-    this.status = status;
-    this.receipt = receipt;
-    this.cart = cart;
-    this.createTime = createTime;
-    this.courierName = courierName;
-    this.userRating = userRating;
-    this.userComment = userComment;
-    this.totalPrice = totalPrice;
-  }
-
 
 }

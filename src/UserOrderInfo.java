@@ -1,5 +1,11 @@
 public class UserOrderInfo {
 
+  public enum shippingWay {
+    air,
+    ship,
+    land
+  }
+
   private String countryCode;
   private String city;
   private String address;
@@ -42,12 +48,6 @@ public class UserOrderInfo {
 
   public void setShipping(shippingWay shipping) {
     this.shipping = shipping;
-  }
-
-  public enum shippingWay {
-    air,
-    ship,
-    land
   }
 
 }
